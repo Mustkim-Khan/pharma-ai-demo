@@ -14,8 +14,8 @@ from utils.langfuse_utils import observe, langfuse_context
 class VoiceService:
     def __init__(self):
         self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        self.stt_model = "gpt-4o-mini-transcribe"
-        self.tts_model = "gpt-4o-mini-tts"
+        self.stt_model = "whisper-1"
+        self.tts_model = "tts-1"
     
     @observe()
     def transcribe(self, audio_base64: str) -> str:
