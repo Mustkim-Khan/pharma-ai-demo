@@ -60,28 +60,28 @@ Navigate to **http://localhost:3000**
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                        FRONTEND (Next.js)                        │
-│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐        │
-│  │   Chat   │  │  Admin   │  │  Refills │  │  Orders  │        │
-│  │   Page   │  │Dashboard │  │   Page   │  │   Page   │        │
-│  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘        │
+│                        FRONTEND (Next.js)                       │
+│  ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐         │
+│  │   Chat   │  │  Admin   │  │  Refills │  │  Orders  │         │
+│  │   Page   │  │Dashboard │  │   Page   │  │   Page   │         │
+│  └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘         │
 └───────┼─────────────┼─────────────┼─────────────┼───────────────┘
         │             │             │             │
         └─────────────┴──────┬──────┴─────────────┘
                              │ REST API
 ┌────────────────────────────┼────────────────────────────────────┐
-│                    BACKEND (FastAPI)                             │
+│                    BACKEND (FastAPI)                            │
 │  ┌─────────────────────────┴─────────────────────────┐          │
-│  │              ORCHESTRATOR AGENT (GPT-5.2)          │          │
-│  │         Coordinates all agents & maintains state   │          │
+│  │              ORCHESTRATOR AGENT (GPT-5.2)          │         │
+│  │         Coordinates all agents & maintains state   │         │
 │  └──────┬──────────┬──────────┬──────────┬───────────┘          │
 │         │          │          │          │                      │
-│  ┌──────┴───┐ ┌────┴────┐ ┌───┴────┐ ┌───┴──────┐              │
+│  ┌──────┴───┐ ┌────┴────┐ ┌───┴────┐ ┌───┴──────┐               │
 │  │Extraction│ │ Safety  │ │ Refill │ │Fulfillment│              │
-│  │  Agent   │ │  Agent  │ │ Agent  │ │  Agent   │              │
-│  │gpt-5-mini│ │ gpt-5.2 │ │gpt-5.2 │ │gpt-5-mini│              │
-│  └──────────┘ └─────────┘ └────────┘ └──────────┘              │
-│                                                                  │
+│  │  Agent   │ │  Agent  │ │ Agent  │ │  Agent   │               │
+│  │gpt-5-mini│ │ gpt-5.2 │ │gpt-5.2 │ │gpt-5-mini│               │
+│  └──────────┘ └─────────┘ └────────┘ └──────────┘               │
+│                                                                 │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐              │
 │  │ Data Service│  │Voice Service│  │   Langfuse  │              │
 │  │  (CSV/Excel)│  │ (STT/TTS)   │  │   Tracing   │              │
@@ -272,7 +272,7 @@ User Request
     │
     ▼
 ┌─────────────────┐
-│ Extraction Agent │ → Parse message, extract entities
+│ Extraction Agent│ → Parse message, extract entities
 └────────┬────────┘
          │
          ▼
